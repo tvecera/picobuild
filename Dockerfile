@@ -67,8 +67,7 @@ RUN mkdir -p /tmp/arm-gcc && \
         cp "/tmp/toolchain-archives/$ARM_PACKAGE_FILE" .; \
     else \
         echo "Downloading ARM toolchain" && \
-        wget --progress=bar:force "$ARM_PACKAGE_URL";
-
+        wget --progress=bar:force "$ARM_PACKAGE_URL"; \
     fi && \
     tar -xf "$ARM_PACKAGE_FILE" && \
     mkdir -p /opt/arm-gcc && \
